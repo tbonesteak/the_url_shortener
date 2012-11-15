@@ -1,0 +1,15 @@
+<h1>All URLs</h1>
+
+<!-- allow the user to enter a new URL -->
+<%= form_for @url do |f| %>
+  <%= f.label :long_url, "Your URL" %>:
+  <%= f.text_field :long_url %>
+  <%= f.submit "Create" %>
+<% end %>
+
+
+<!-- display all the URLs -->
+<% @urls.each do |url| %>
+<%= url.long_url %><br/>
+<%= url.short_code %>
+<% end%>
