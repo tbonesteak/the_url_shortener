@@ -9,7 +9,8 @@
 
 
 <!-- display all the URLs -->
-<% @urls.each do |url| %>
-<%= url.long_url %><br/>
-<%= url.short_code %>
-<% end%>
+ <% @urls.each do |url| %>
+ <%= url.long_url %>
+  --- 
+ <%= url.short_code %><br/>
+ <% end%>
