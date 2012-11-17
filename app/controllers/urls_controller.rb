@@ -9,9 +9,10 @@ class UrlsController < ApplicationController
     @url = Url.new(params[:url])
 
     if @url.save
-      @url = Url.new
-      @urls = Url.all
-      render action: "index"
+      # @url = Url.new
+      # @urls = Url.all
+      # render action: "index"
+      redirect_to urls_path
     end
 
   end
